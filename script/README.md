@@ -1,1 +1,3 @@
-This is the `script` folder. These are basic summary scripts for the oyster heights data. TSColeman is updating data, then will update scripts.
+This is the `script` folder. These are basic summary scripts for the oyster subtidal data.
+  
+`something.R`: summary statistics and figures for oyster subtidal data
