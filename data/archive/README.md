@@ -1,0 +1,1 @@
+This is the `data` folder. It contains data files for oyster heights summary repository. TSColeman is updating and will update this when data are complete. File needs to be entered into master_data repository after this is finished.
