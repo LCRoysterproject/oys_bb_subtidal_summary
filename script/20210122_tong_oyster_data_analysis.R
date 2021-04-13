@@ -64,19 +64,20 @@ for(i in stations){
   temp_s2 <- aggregate(size_class_2 ~ lick, data = temp, FUN = f)
   temp_s3 <- aggregate(size_class_3 ~ lick, data = temp, FUN = f)
   
-  plot(temp_s1$lick, temp_s1$size_class_1[,1], type = "l", lwd = 2, col = 'black', ylim = c(min(temp_s1, temp_s2, temp_s3, na.rm = T),max(temp_s1,temp_s2,temp_s3, na.rm = T)), xlab = "Lick", ylab = "Oyster Counts")
-  lines(temp_s1$lick, temp_s1$size_class_1[,2], type = "l", lwd = 2, col = 'black', lty = 2)
-  lines(temp_s1$lick, temp_s1$size_class_1[,3], type = "l", lwd = 2, col = 'black', lty = 2)
+  plot(temp_s1$lick, temp_s1$size_class_1[,1], type = "l", lwd = 2, col = 'black', ylim = c(min(temp_s1$size_class_1[,1], temp_s2$size_class_2[,1], temp_s3$size_class_3[,1], na.rm = T),max(temp_s1$size_class_1[,1],temp_s2$size_class_2[,1],temp_s3$size_class_3[,1], na.rm = T)), xlab = "Lick", ylab = "Oyster Counts")
+  #lines(temp_s1$lick, temp_s1$size_class_1[,2], type = "l", lwd = 2, col = 'black', lty = 2)
+  #lines(temp_s1$lick, temp_s1$size_class_1[,3], type = "l", lwd = 2, col = 'black', lty = 2)
   
   lines(temp_s2$lick, temp_s2$size_class_2[,1], lwd = 2, col = 'red')
-  lines(temp_s2$lick, temp_s2$size_class_2[,2], lwd = 2, col = 'red', lty = 2)
-  lines(temp_s2$lick, temp_s2$size_class_2[,3], lwd = 2, col = 'red', lty = 2)
+  #lines(temp_s2$lick, temp_s2$size_class_2[,2], lwd = 2, col = 'red', lty = 2)
+  #lines(temp_s2$lick, temp_s2$size_class_2[,3], lwd = 2, col = 'red', lty = 2)
   
   lines(temp_s3$lick, temp_s3$size_class_3[,1], lwd = 2, col = 'purple')
-  lines(temp_s3$lick, temp_s3$size_class_3[,2], lwd = 2, col = 'purple', lty = 2)
-  lines(temp_s3$lick, temp_s3$size_class_3[,3], lwd = 2, col = 'purple', lty = 2)
+  #lines(temp_s3$lick, temp_s3$size_class_3[,2], lwd = 2, col = 'purple', lty = 2)
+  #lines(temp_s3$lick, temp_s3$size_class_3[,3], lwd = 2, col = 'purple', lty = 2)
   
   #legend("topleft", legend = c("Size Class 1: < 1 inch", "Size Class 2: 1-3 inches", "Size Class 3: >3 inches"), lty = 1, col = c("black", "red", "purple"), bty="n")
   title(main = paste("Station:", i))
   
 }
+
